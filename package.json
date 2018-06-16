@@ -1,0 +1,60 @@
+{
+  "name": "vue-clip-countdown",
+  "version": "0.0.0",
+  "description": "My majestic Vue component.",
+  "repository": {
+    "url": "luyilin/vue-clip-countdown",
+    "type": "git"
+  },
+  "main": "dist/vue-clip-countdown.cjs.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm test && npm run build",
+    "lint": "eslint . --ext .js --ext .vue",
+    "test": "npm run lint && tyu",
+    "build": "bili",
+    "example": "poi",
+    "build:example": "poi build"
+  },
+  "author": {
+    "name": "luyilin",
+    "email": "luyilin12@gmail.com"
+  },
+  "license": "MIT",
+  "poi": {
+    "entry": "example/index.js",
+    "dist": "example/dist",
+    "homepage": "./"
+  },
+  "bili": {
+    "format": [
+      "cjs",
+      "umd"
+    ],
+    "name": "vue-clip-countdown",
+    "plugins": [
+      "vue"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:vue/recommended"
+    ]
+  },
+  "devDependencies": {
+    "bili": "^1.3.3",
+    "eslint": "^4.14.0",
+    "eslint-plugin-vue": "^4.0.1",
+    "poi": "^9.3.10",
+    "rollup-plugin-vue": "^2.5.2",
+    "tyu": "^1.0.0",
+    "vue-test-utils": "^1.0.0-beta.9"
+  },
+  "dependencies": {
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.3",
+    "vue-style-loader": "^4.1.0"
+  }
+}
